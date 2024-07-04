@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+:root{
+    --clr-primary: hsl(47, 88%, 63%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey: hsl(0, 0%, 50%);
+    --clr-black: hsl(0, 0%, 7%);
+
+    --fw-300: 300;
+    --fw-800: 800;
+
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+body{
+    font-family: "Figtree", sans-serif;
+    color: var(--clr-black);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-primary);
+    font-size: clamp(0.9rem, 0.75rem + 0.5vw, 1rem);
+}
+/* Utilities */
+.lead{
+    color: var(--clr-grey);
+}
+.category{
+    font-weight: var(--fw-800);
+    padding: 0.25em 0.75em;
+    background-color: var(--clr-primary);
+    border-radius: 0.25em;
+    display: inline-block;
+}
+.blog-card{
+    background-color: var(--clr-white);
+    width: 90%;
+    max-width: 384px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 1.25em;
+    display: grid;
+    gap: 1.5rem;
+    border: 1px solid var(--clr-black);
+    box-shadow: 7px 7px 0px var(--clr-black);
+    transition: 0.2s ease-out;
+}
+.blog-card:hover{
+    box-shadow: 10px 10px 0px var(--clr-black);
+}
+.blog-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.625em;
+}
+.blog-content{
+    display: grid;
+    gap: 0.75rem;
+} 
+.category{
+    justify-self: start;
+}
+.title{
+    font-size: clamp(1.25rem, 0.75rem + 1.5vw, 1.5rem);
+    transition: 0.2s ease-out;
+}
+.title:hover{
+    color: var(--clr-primary);
+    cursor: pointer;
+}
+.author{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.author-image{
+    width: 32px;
+    height: 32px;
+}
+.author-name{
+    font-weight: var(--fw-800);
+}
+@media(min-width:968px){
+    .blog-card{
+        width: 100%;
+    }
+}
